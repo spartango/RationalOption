@@ -17,4 +17,8 @@ In looking at the use cases for option types in Java, we find often find that th
 
 Rational Option provides an improvement upon this model: when a function returns an Absent, it can provide an Exception (which can be type-constrained generically) explaining its failure. This way, callers can handle failures programmatically (utilizing the Exception types and functionality) or even throw the exceptions up for catching/disruption. Additionally, this creates a clear declaration of what failures might result from the calling of a specific function (in the return type). 
 
+##Rational API
 
+Rational Option's API is modeled after Google Guava's [Optional](http://docs.guava-libraries.googlecode.com/git-history/release/javadoc/com/google/common/base/Optional.html) class API, which is fairly sane and widely used. The primary difference is that when you have an absent option (`Option.absent(E)`), you are obliged to provide an exception. Further, any option can be probed for an exception (`option.hasException()` and `option.getException()`), although Options that are present will not have one. 
+
+For more information on how to use option types in Java, refer to Google Guava's [guide](http://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained). Nearly everything there holds true for Rational Option. 
