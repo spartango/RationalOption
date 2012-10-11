@@ -18,11 +18,6 @@ repositories {
 // External dependencies
 dependencies {
     
-    // Logging
-    compile([group: 'org.slf4j', name: 'slf4j-api', version: '1.6.6'], 
-            [group: 'ch.qos.logback', name: 'logback-core', version: '1.0.7'],
-            [group: 'ch.qos.logback', name: 'logback-classic', version: '1.0.7'])
-
     // Junit
     testCompile group: 'junit', name: 'junit', version: '4.+'
 
