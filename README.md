@@ -22,3 +22,9 @@ Rational Option provides an improvement upon this model: when a function returns
 Rational Option's API is modeled after Google Guava's [Optional](http://docs.guava-libraries.googlecode.com/git-history/release/javadoc/com/google/common/base/Optional.html) class API, which is fairly sane and widely used. The primary difference is that when you have an absent option (`Option.absent(E)`), you are obliged to provide an exception. Further, any option can be probed for an exception (`option.hasException()` and `option.getException()`), although Options that are present will not have one. 
 
 For more information on how to use option types in Java, refer to Google Guava's [guide](http://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained). Nearly everything there holds true for Rational Option. 
+
+For detailed documentation, see Rational Option's [Javadocs](http://spartango.github.com/RationalOption/javadoc/)
+
+##Build & Test
+
+Rational Option uses [Gradle](http://www.gradle.org) as its build system, and includes JUnit tests to demonstrate that it works. You can include Rational Option as a subproject in existing build systems, or you can use gradle to generate a jar. 
