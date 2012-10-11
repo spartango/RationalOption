@@ -1,8 +1,12 @@
 package com.perceptus.option;
 
+import java.io.Serializable;
 import java.util.Set;
 
-public abstract class Option<T, E extends Exception> {
+public abstract class Option<T, E extends Exception> implements Serializable {
+
+    private static final long serialVersionUID = -4869775898819966212L;
+
     public static <T, E extends Exception> Option<T, E> absent(E exception) {
         return new Absent<T, E>(exception);
     }

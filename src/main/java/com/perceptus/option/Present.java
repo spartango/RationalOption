@@ -4,9 +4,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Present<T, E extends Exception> extends Option<T, E> {
-    private static final int MAGIC = 0x598df91c;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 835568832884560511L;
 
-    private final T          value;
+    private static final int  MAGIC            = 0x598df91c;
+
+    private final T           value;
 
     public Present(T value) {
         this.value = value;

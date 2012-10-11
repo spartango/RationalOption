@@ -4,9 +4,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Absent<T, E extends Exception> extends Option<T, E> {
-    private static final int MAGIC = 0x598df91d;
+    /**
+     * 
+     */
+    private static final long serialVersionUID = -4502256771784687414L;
 
-    private final E          exception;
+    private static final int  MAGIC            = 0x598df91d;
+
+    private final E           exception;
 
     public Absent(E exception) {
         this.exception = exception;
